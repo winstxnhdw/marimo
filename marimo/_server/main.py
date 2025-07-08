@@ -1,7 +1,6 @@
 # Copyright 2024 Marimo. All rights reserved.
 from __future__ import annotations
 
-from dataclasses import dataclass
 from typing import TYPE_CHECKING, Optional
 
 from starlette.applications import Starlette
@@ -36,12 +35,6 @@ if TYPE_CHECKING:
     from starlette.types import Lifespan
 
 LOGGER = _loggers.marimo_logger()
-
-
-@dataclass
-class LspPorts:
-    pylsp: Optional[int]
-    copilot: Optional[int]
 
 
 # Create app
